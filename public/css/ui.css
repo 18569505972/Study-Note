@@ -1,0 +1,87 @@
+/* ---------- 全局样式 ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.contain {
+    display: flex;
+    height: 100%;
+}
+
+nav {
+    flex: 2;
+    background-color: #efefee;
+    color: #000;
+    padding-top: 20px;
+    padding-left: 20px;
+    overflow: scroll;
+    text-align: center;
+    height: 100%;
+}
+
+.header{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+nav ol {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+nav li {
+    padding: 15px 5px;
+    margin-left: 20px;
+}
+
+nav li span{
+    color:  #1E90FF;
+    font-size: 16px;
+    float: right;
+    margin-right: 10px;
+}
+
+#add{
+    width: 80%;
+}
+
+.shadow {
+    flex: 8;
+    padding: 20px;
+}
+
+.editTit{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+#editor {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px;
+    height: 600px;
+    width: 80%;
+}
+
+#save {
+    display: block;
+    float: right;
+    margin-right: 10px;
+}
+
+.blue{
+    background: #40E0D0;
+}

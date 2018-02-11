@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= blog.title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/zui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/zui.js"></script>
+    <script type="text/javascript" src="utils/common.js"></script>
+</head>
+
+<body>
+    <div class="contain" id="app">
+        <nav>
+            <h1>工作笔记</h1>
+            <h3>作者：<span style="color:#4169E1"><%=name %></span></h3>
+            <h3>创建时间：<span style="color:#4169E1"><%=blog.time %></span></h3>
+            <ol>
+                <li v-for="item in arr" @click="getContent(item._id,$event)">
+                    {{item.title}}{{item.updated_at}}
+                </li>
+            </ol>
+        </nav>
+        <div class="content">
+            <h1>{{title}}</h1>
+            <!--<ol type='I'>
+                <li v-for="item in message">{{item.name}}
+                    <div v-for="(el,elnum) in item.content">{{elnum+1}}、{{el}}</div>
+                </li>
+            </ol>-->
+            <p v-html="message"></p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/scripts/index.js"></script>
+
+</html>

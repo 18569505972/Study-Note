@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= blog.title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/zui.css">
+    <link rel="stylesheet" href="/css/ui.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script type="text/javascript" src="scripts/zui.js"></script>
+    <script type="text/javascript" src="utils/common.js"></script>
+</head>
+
+<body>
+    <div class="contain" id="app">
+        <nav>
+            <div class="header">
+                文档目录
+            </div>
+            <ol v-if="arr">
+                <li v-for="item in arr" @click="getContent(item._id,$event)">
+                    {{item.title}}<span @click="deleteMenus($event,item._id)">删除</span>
+                </li>
+            </ol>
+            <button class="btn btn-primary" type="button" data-moveable="true" data-toggle="modal" data-target="#addModal" id="add">添加</button>
+        </nav>
+        <div class="shadow">
+            <button class="btn btn-primary" type="button" @click="saveContent()" id="save">保存修改</button>
+            <span class="editTit">编辑器</span>
+            <!-- 添加对话框HTML -->
+            <div class="modal fade" id="addModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                            <h4 class="modal-title">目录标题</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input class="form-control form-focus" autofocus type="text" placeholder="请输入目录标题" id="title"> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" @click="addMenus()" id="confirm">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="editor"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/scripts/wangEditor.js"></script>
+<script type="text/javascript" src="/scripts/ui.js"></script>
+
+</html>
