@@ -1,5 +1,5 @@
 # studyNote
-This is a repository of study notes.
+This is a repository of study notes.  
 地址总汇：  
 		1、'/'  展示首页   
 		2、'/ui'  后台编辑页  
