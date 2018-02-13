@@ -21,10 +21,10 @@
             </header>
             <section>
                 <div class="input-control has-icon-left">
-                    <input id="username" type="text" class="form-control" placeholder="用户名" @focus="usernameFocus($event)">
+                    <input id="username" type="text" class="form-control" placeholder="用户名" v-focus="usernameFocus">
                     <label for="username" class="input-control-icon-left"><i class="icon icon-user "></i></label>
                 </div>
-                <div style="color: red;padding: 5px 0;" class="usernameTest">&nbsp;</div>
+                <div style="color: red;padding: 5px 0;" id="usernameTest">&nbsp;</div>
                 <div class="input-control has-icon-left">
                     <input id="password" type="password" class="form-control" placeholder="密码">
                     <label for="password" class="input-control-icon-left"><i class="icon icon-key"></i></label>

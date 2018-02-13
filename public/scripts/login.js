@@ -29,7 +29,7 @@ var app = new Vue({
                     }else if(data.status==3){
                         
                     }else {
-                        $(".usernameTest").html(data.message);
+                        $("#usernameTest").html(data.message);
                     };
                 },
                 error: function(err) {
@@ -40,15 +40,20 @@ var app = new Vue({
                 }
             });
         },
-        usernameFocus:function(e){
-            $(e).val('');
-            $(".usernameTest").text();
+        usernameFocus:function(){
+             this.$emit('on-focus', 
+                $("#usernameTest").html('')
+             )
+            
         },
         jumpRegister: function() {
             window.location.href="/register";
         }
     },
     computed: {
+
+    },
+    updated:{
 
     }
 });
