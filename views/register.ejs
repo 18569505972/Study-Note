@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="/css/zui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/zui.js"></script>
+    <script type="text/javascript" src="utils/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+
+<body>
+    <div class="contain" id="app">
+        <div class="model">
+            <section>
+                <div class="input-control has-icon-left">
+                    <input id="username" type="text" class="form-control" placeholder="用户名">
+                    <label for="username" class="input-control-icon-left"><i class="icon icon-user "></i></label>
+                </div>
+                <div class="input-control has-icon-left margin-top-30">
+                    <input id="telephone" type="tel" class="form-control" placeholder="手机号">
+                    <label for="telephone" class="input-control-icon-left"><i class="icon icon-mobile"></i></label>
+                </div>
+                <div class="input-control has-icon-left margin-top-30">
+                    <input id="email" type="email" class="form-control" placeholder="E-mail">
+                    <label for="email" class="input-control-icon-left"><i class="icon icon-envelope"></i></label>
+                </div>
+                <div class="input-control has-icon-left margin-top-30">
+                    <input id="password" type="text" class="form-control" placeholder="输入密码" autocomplete="off" onfocus="this.type='password'">
+                    <label for="password" class="input-control-icon-left"><i class="icon icon-key"></i></label>
+                </div>
+                <div class="input-control has-icon-left margin-top-30">
+                    <input id="passwordAgain" type="text" class="form-control" placeholder="再次输入密码" autocomplete="off" onfocus="this.type='password'">
+                    <label for="passwordAgain" class="input-control-icon-left"><i class="icon icon-question"></i></label>
+                </div>
+            </section>
+            <footer>
+                <button type="button" class="btn btn-info loginBtn cursor btn-block" @click="register()">立即注册</button>
+            </footer>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/scripts/register.js"></script>
+</html>

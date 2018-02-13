@@ -15,7 +15,7 @@ var app = new Vue({
             dataType: 'json',
             data: {},
             success: function(data) {
-                if (data.message) {
+                if (data.status==0) {
                     that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                     return;
                 };
@@ -39,7 +39,7 @@ var app = new Vue({
                 dataType: 'json',
                 data: { id: id },
                 success: function(data) {
-                    if (data.message) {
+                    if (data.status==0) {
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     };

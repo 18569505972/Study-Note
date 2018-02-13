@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/css/zui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/zui.js"></script>
+    <script type="text/javascript" src="utils/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+
+<body>
+    <div class="contain" id="app">
+        <div class="model">
+            <header>
+                <p class="fz-30 col-white">Sign in</p>
+                <p class="col-white cursor" id="register" @click="jumpRegister()">Create Account</p>
+            </header>
+            <section>
+                <div class="input-control has-icon-left">
+                    <input id="username" type="text" class="form-control" placeholder="用户名" @focus="usernameFocus($event)">
+                    <label for="username" class="input-control-icon-left"><i class="icon icon-user "></i></label>
+                </div>
+                <div style="color: red;padding: 5px 0;" class="usernameTest">&nbsp;</div>
+                <div class="input-control has-icon-left">
+                    <input id="password" type="password" class="form-control" placeholder="密码">
+                    <label for="password" class="input-control-icon-left"><i class="icon icon-key"></i></label>
+                </div>
+            </section>
+            <footer>
+                <button type="button" class="btn btn-info loginBtn cursor btn-block" @click="login()">登录</button>
+                <button class="btn btn-link col-white cursor" type="button" id="forgetPwd">忘记密码？</button>
+            </footer>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/scripts/login.js"></script>
+
+</html>

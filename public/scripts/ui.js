@@ -13,7 +13,7 @@ var app = new Vue({
             dataType: 'json',
             data: {},
             success: function(data) {
-                if (data.message) {
+                if (data.status==0) {
                     that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                     return;
                 };
@@ -48,7 +48,7 @@ var app = new Vue({
                 dataType: 'json',
                 data: { id: id },
                 success: function(data) {
-                    if (data.message) {
+                    if (data.status==0) {
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     };
@@ -75,7 +75,7 @@ var app = new Vue({
                     $("#confirm").addClass("disabled").attr("disabled");
                 },
                 success: function(data) {
-                    if (data.message) {
+                    if (data.status==0) {
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     };
@@ -103,7 +103,7 @@ var app = new Vue({
                 dataType: 'json',
                 data: { id: id },
                 success: function(data) {
-                    if (data.message) {
+                    if (data.status==0) {
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     };
@@ -136,7 +136,7 @@ var app = new Vue({
                     $("#save").prop("disabled");
                 },
                 success: function(data) {
-                    if (data.message) {
+                    if (data.status==0) {
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     };
