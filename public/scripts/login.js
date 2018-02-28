@@ -25,7 +25,7 @@ var app = new Vue({
                         that.zui.toast(data.message, 'center', 'warning', null, 'warning-sign');
                         return;
                     }else if(data.status == 1){
-                        window.location.href = "/index";
+                        window.location.href='/ui';
                     }else if(data.status==3){
                         
                     }else {

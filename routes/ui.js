@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var todo = require('../model/todo');
 // 创建 application/x-www-form-urlencoded 编码解析
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-router.get('/ui', function(req, res) {
+var filter = require('../libs/filter');
+router.get('/ui',filter.authorize, function(req, res) {
     res.render('ui.ejs', {});
 });
 router.get('/uiInit', urlencodedParser, function(req, res) {

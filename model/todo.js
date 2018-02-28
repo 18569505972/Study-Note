@@ -23,6 +23,7 @@ module.exports = {
                 return;
             }
             if (password == req.body.password) {
+                req.session.username = req.body.username;
                 res.end(JSON.stringify({ 'message': '登录成功', 'err': null, status: 1 }));
             } else {
                 res.end(JSON.stringify({ 'message': '密码输入错误', 'err': null, status: 3 }));
