@@ -1,4 +1,4 @@
-# studyNote
+# studyNote express+vue+mongodb
 This is a repository of study notes.  
 地址总汇：  
 		1、'/'  展示首页   
